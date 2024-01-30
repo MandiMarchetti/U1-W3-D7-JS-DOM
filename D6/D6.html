@@ -35,7 +35,7 @@
 
   <body>
     <div>
-      <h1>Questo è il titolo della pagina</h1>
+      <h1 class="title">Questo è il titolo della pagina</h1>
       <h2>Questo è il sottotitolo della pagina</h2>
     </div>
 
@@ -79,18 +79,30 @@
         >
       </h3>
     </footer>
+
     <script>
-      /* ESERCIZIO 1
+
+       /* ESERCIZIO 1
        Scrivi una funzione per cambiare il titolo della pagina in qualcos'altro
     */
 
-      const changeTitle = function () {}
+    const changeTitle = function () {
+        const title = document.getElementsByTagName("title")[0];
+        title.innerText = "Nuovo Títolo";
+       };
+       changeTitle();
+       
+
 
       /* ESERCIZIO 2
        Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
     */
 
-      const addClassToTitle = function () {}
+      const addClassToTitle = function () {
+        const h1 = document.querySelector("h1");
+        h1.className = "titolo-principale";
+      };
+      addClassToTitle();
 
       /* ESERCIZIO 3
        Scrivi una funzione che cambi il testo dei p figli di un div
